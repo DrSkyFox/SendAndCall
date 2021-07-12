@@ -15,7 +15,7 @@ abstract class Car {
 
     //Перенести методы open и start в интерфейс
     protected void start() {
-        System.out.println("Car starting");
+        System.out.println("carpack.Car starting");
     }
 
     public Engine getEngine() {

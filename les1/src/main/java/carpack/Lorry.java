@@ -1,5 +1,6 @@
 package carpack;
-//Наследоваться класс может только от 1 класса. А movable и Stopable - это интрефейсы, которые подключаются через implements
+
+//Наследоваться класс может только от 1 класса. А movable и carpack.Stopable - это интрефейсы, которые подключаются через implements
 public class Lorry extends Car implements Movable, Stopable {
 
     public Lorry(Engine engine, String color, String name) {

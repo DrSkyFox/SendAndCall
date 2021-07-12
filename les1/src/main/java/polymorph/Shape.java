@@ -1,6 +1,6 @@
 package polymorph;
 
-public abstract class Shape {
+public class Shape {
     private String name;
 
     public String getName() {
@@ -12,12 +12,12 @@ public abstract class Shape {
     }
 
     public void draw() {
-        System.out.println("This "  + name  + "is drawing");
+        System.out.println("Drawing shape...");
     }
 
     @Override
     public String toString() {
-        return "Shape{" +
+        return "polymorph.Shape{" +
                 "name='" + name + '\'' +
                 '}';
     }
