@@ -29,25 +29,32 @@ order by pauseDurations desc
 
 
 
-select ff.name,
-       ff.cid     customers,
-       case
-           when div(ff.cid, fc.sid) is null then 0
-           else div(ff.cid, fc.sid)
-           end as avgCustPerSess
-        ,
-       case
-           when ff.summ is null then 0
-           else ff.summ
-           end as summ
-from (
-         select f.id, f.name, count(c.id) cid, sum(s.cost) summ
-         from film f
-                  left join session s on f.id = s.film_id
-                  left join customer c on s.id = c.session_id
-         group by f.id) ff
-         left join (select s.film_id, count(s.id) sid from session s group by film_id) fc on ff.id = fc.film_id
-order by summ desc
+select fin.name, fin.customers, fin.avgCustPerSess, fin.summ  from (
+                                                                       select ff.name,
+                                                                              ff.cid     customers,
+                                                                              case
+                                                                                  when div(ff.cid, fc.sid) is null then 0
+                                                                                  else div(ff.cid, fc.sid)
+                                                                                  end as avgCustPerSess
+                                                                               ,
+                                                                              case
+                                                                                  when ff.summ is null then 0
+                                                                                  else ff.summ
+                                                                                  end as summ
+                                                                       from (
+                                                                                select f.id, f.name, count(c.id) cid, sum(s.cost) summ
+                                                                                from film f
+                                                                                         left join session s on f.id = s.film_id
+                                                                                         left join customer c on s.id = c.session_id
+                                                                                group by f.id) ff
+                                                                                left join (select s.film_id, count(s.id) sid from session s group by film_id) fc on ff.id = fc.film_id
+                                                                       order by summ desc) fin
+union all (
+    select 'TOTAL' , itog.cid, div(itog.cid, ss.scount) avgCustPerSess, itog.summ
+    from (select sum(s.cost) summ, count(c.id) cid
+          from customer c
+                   left join session s on c.session_id = s.id) itog
+             left join (select count(s.id) scount from session s) ss on 1 = 1)
 
 
 
