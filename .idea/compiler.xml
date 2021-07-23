@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="les1" />
         <module name="les2" />
+        <module name="les3" />
       </profile>
     </annotationProcessing>
   </component>
