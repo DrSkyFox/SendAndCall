@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>a19a3970-3370-457a-8351-57d34ba10c1f.SCHEMA:cinema.public</OriginalElement>
+  <nodes>
+    <node x="0.0" y="151.0">a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.session</node>
+    <node x="12.5" y="0.0">a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.film</node>
+    <node x="12.0" y="346.0">a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.customer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.customer" target="a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.session" relationship="REFERENCES">
+      <point x="0.0" y="-39.5" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.session" target="a19a3970-3370-457a-8351-57d34ba10c1f.TABLE:cinema.public.film" relationship="REFERENCES">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="50.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="75.5" y="212.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
