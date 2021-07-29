@@ -11,6 +11,7 @@
         <module name="les2" />
         <module name="les3" />
         <module name="les1" />
+        <module name="les6" />
       </profile>
     </annotationProcessing>
   </component>
