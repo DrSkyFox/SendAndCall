@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="les1" />
+        <module name="les5" />
         <module name="les2" />
         <module name="les3" />
+        <module name="les1" />
       </profile>
     </annotationProcessing>
   </component>
