@@ -13,6 +13,7 @@
         <module>les2</module>
         <module>les3</module>
         <module>les5</module>
+        <module>les6</module>
     </modules>
 
     <properties>
