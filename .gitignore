@@ -6,3 +6,5 @@
 
 target/
 !**/src/main/**/target/
+!../.mvn/wrapper/maven-wrapper.jar
+/.mvn/
